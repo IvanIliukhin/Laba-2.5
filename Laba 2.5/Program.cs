@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace тренировка
+namespace training
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace тренировка
             else return board[k] != j && (i - k) != (j - board[k]) && (i - k) != (board[k] - j) && check(i, j, k + 1);
         }
 
-        public static int put_queen(int n, int i, int j)
+        public static int putQueen(int n, int i, int j)
         {
             if (i == n) return 1;
             else
@@ -24,9 +24,9 @@ namespace тренировка
                     if (check(i, j, 0))
                     {
                         board[i] = j;
-                        r = put_queen(n, i + 1, 0);
+                        r = putQueen(n, i + 1, 0);
                     }
-                    return r + put_queen(n, i, j + 1);
+                    return r + putQueen(n, i, j + 1);
                 }
                 else return 0;
             }
