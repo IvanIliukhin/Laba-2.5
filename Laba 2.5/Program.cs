@@ -36,7 +36,7 @@ namespace training
         {
             board = new int[10];
             var n = int.Parse(Console.ReadLine());
-            Console.WriteLine(put_queen(n, 0, 0));
+            Console.WriteLine(putQueen(n, 0, 0));
         }
     }
 }
